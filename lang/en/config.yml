@@ -1,8 +1,7 @@
-generate-config: CSL Compatibility
+generate-config: CustomSkinLoader
 
 mod-intro: CustomSkinLoader is a mod that loads custom skins and capes from any skin server or local files.
 mod-link: https://modrinth.com/mod/customskinloader
-legacy: Legacy
 
 extra-list-intro: |
   Download the ExtraList file below and put it into <code>CustomSkinLoader/ExtraList</code> directory. Restart the game, and it's done!

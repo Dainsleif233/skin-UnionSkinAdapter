@@ -1,8 +1,7 @@
-generate-config: 皮肤补丁兼容
+generate-config: 皮肤补丁
 
 mod-intro: 万用皮肤补丁是一个支持从任意皮肤站或本地加载自定义皮肤与披风的模组。
 mod-link: https://www.mcmod.cn/class/883.html
-legacy: 传统加载方式
 
 extra-list-intro: |
   下载下面提供的 ExtraList 文件，放入 <code>CustomSkinLoader/ExtraList</code> 目录下并重启游戏即可。

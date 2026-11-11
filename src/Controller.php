@@ -3,11 +3,10 @@
 namespace SysHub\UnionSkinAdapter;
 
 use App\Services\Hook;
-use App\Services\PluginManager;
 
 class Controller
 {
-    public function generate(PluginManager $plugins)
+    public function generate()
     {
         $siteName = option_localized('site_name');
 
@@ -36,7 +35,6 @@ class Controller
 
         return view('SysHub\UnionSkinAdapter::generator', [
             'csl' => json_encode($csl, $jsonConstants),
-            'has_legacy' => optional($plugins->get('legacy-api'))->isEnabled(),
             'site' => $siteName,
         ]);
     }
