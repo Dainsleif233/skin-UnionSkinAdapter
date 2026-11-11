@@ -13,22 +13,21 @@ class Controller
         $siteName = option_localized('site_name');
 
         $mojang = ['name' => 'Mojang', 'type' => 'MojangAPI'];
+        $union = [
+            'name' => 'Union',
+            'type' => 'MojangAPI',
+            'apiRoot' => 'https://skin.mualliance.ltd/api/union/yggdrasil/api/',
+            'sessionRoot' => 'https://skin.mualliance.ltd/api/union/yggdrasil/sessionserver/',
+        ];
         $self = [
             'name' => $siteName,
             'root' => url('/csl').'/',
             'type' => 'CustomSkinAPI',
         ];
-        if (option('csl_first', 'self') === 'self') {
-            $csl = [
-                'enable' => true,
-                'loadlist' => [$self, $mojang],
-            ];
-        } else {
-            $csl = [
-                'enable' => true,
-                'loadlist' => [$mojang, $self],
-            ];
-        }
+        $csl = [
+            'enable' => true,
+            'loadlist' => [$union, $self, $mojang],
+        ];
 
         Hook::addScriptFileToPage(plugin_assets('union-skin-adapter', 'generator.js'));
 

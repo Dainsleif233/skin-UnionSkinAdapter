@@ -17,12 +17,6 @@ class Configuration
                     trans('SysHub\UnionSkinAdapter::options.custom_intro.title')
                 )->rows(5)
                 ->description(trans('SysHub\UnionSkinAdapter::options.custom_intro.description'));
-
-                $form->select(
-                    'csl_first',
-                    trans('SysHub\UnionSkinAdapter::options.csl_first.title')
-                )->option('mojang', 'Mojang')
-                ->option('self', trans('SysHub\UnionSkinAdapter::options.csl_first.self'));
             }
         )->handle();
 
