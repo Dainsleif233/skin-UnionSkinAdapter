@@ -1,6 +1,6 @@
 {% extends 'user.base' %}
 
-{% block title %}{{ trans('Blessing\\ConfigGenerator::config.generate-config') }}{% endblock %}
+{% block title %}{{ trans('SysHub\\UnionSkinAdapter::config.generate-config') }}{% endblock %}
 
 {% block content %}
   <link rel="stylesheet"
@@ -17,7 +17,7 @@
           {% if custom_intro %}
             {{ custom_intro|raw }}
           {% else %}
-            <p>{{ trans('Blessing\\ConfigGenerator::config.mod-intro') }}</p>
+            <p>{{ trans('SysHub\\UnionSkinAdapter::config.mod-intro') }}</p>
             <ul>
               <li>
                 <a href="https://www.mcbbs.net/thread-269807-1-1.html" target="_blank" rel="noopener noreferrer">CustomSkinLoader</a>
@@ -28,7 +28,7 @@
                 </li>
               {% endif %}
               {% if has_legacy %}
-                <li>{{ trans('Blessing\\ConfigGenerator::config.legacy') }}</li>
+                <li>{{ trans('SysHub\\UnionSkinAdapter::config.legacy') }}</li>
               {% endif %}
             </ul>
           {% endif %}
@@ -57,11 +57,11 @@
           <h3 class="card-title">CustomSkinLoader ExtraList</h3>
         </div>
         <div class="card-body">
-          {{ trans('Blessing\\ConfigGenerator::config.extra-list-intro', {site:site})|raw|nl2br }}
+          {{ trans('SysHub\\UnionSkinAdapter::config.extra-list-intro', {site:site})|raw|nl2br }}
         </div>
         <div class="card-footer">
           <button class="btn bg-primary" id="download-extra-list">
-            {{ trans('Blessing\\ConfigGenerator::config.extra-list-download') }}
+            {{ trans('SysHub\\UnionSkinAdapter::config.extra-list-download') }}
           </button>
         </div>
       </div>

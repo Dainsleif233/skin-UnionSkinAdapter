@@ -1,6 +1,6 @@
 <?php
 
-namespace Blessing\ConfigGenerator;
+namespace SysHub\UnionSkinAdapter;
 
 use App\Services\Hook;
 use App\Services\PluginManager;
@@ -36,17 +36,17 @@ class Controller
             'legacyCapeURIs' => [],
         ];
 
-        Hook::addScriptFileToPage(plugin_assets('config-generator', 'generator.js'));
+        Hook::addScriptFileToPage(plugin_assets('union-skin-adapter', 'generator.js'));
 
         $jsonConstants = JSON_PRETTY_PRINT
             | JSON_UNESCAPED_UNICODE
             | JSON_UNESCAPED_SLASHES;
 
-        $intro = option_localized('config_generator_intro', '');
+        $intro = option_localized('union_skin_adapter_intro', '');
         $converter = new GithubFlavoredMarkdownConverter();
         $intro = $converter->convertToHtml($intro);
 
-        return view('Blessing\ConfigGenerator::generator', [
+        return view('SysHub\UnionSkinAdapter::generator', [
             'csl' => json_encode($csl, $jsonConstants),
             'has_usm' => optional($plugins->get('usm-api'))->isEnabled(),
             'usm' => json_encode($usm, $jsonConstants),

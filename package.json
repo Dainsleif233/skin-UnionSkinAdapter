@@ -1,11 +1,11 @@
 {
-  "name": "config-generator",
-  "version": "3.2.2",
-  "title": "Blessing\\ConfigGenerator::general.title",
-  "description": "Blessing\\ConfigGenerator::general.description",
-  "author": "printempw",
+  "name": "union-skin-adapter",
+  "version": "1.0.0",
+  "title": "SysHub\\UnionSkinAdapter::general.title",
+  "description": "SysHub\\UnionSkinAdapter::general.description",
+  "author": ["printempw", "Dainsleif"],
   "url": "https://blessing.studio/",
-  "namespace": "Blessing\\ConfigGenerator",
+  "namespace": "SysHub\\UnionSkinAdapter",
   "require": {
     "blessing-skin-server": "^5|^6"
   },
