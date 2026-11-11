@@ -1,13 +1,9 @@
-generate-config: Generate Config
+generate-config: CSL Compatibility
 
-mod-requirement: Mod Requirement
 mod-intro: 'We support the APIs below:'
 legacy: Legacy
-version: Version
-config-file: Config File
 
 extra-list-intro: |
-  ExtraList (required CustomSkinLoader 14.4+) is designed for providing a quick and more convenient way to add custom skin servers.<br>
-  Just download the ExtraList file below and put it into <code>.minecraft/CustomSkinLoader/ExtraList</code> directory. Restart the Minecraft, and it's done!
+  Download the ExtraList file below and put it into <code>CustomSkinLoader/ExtraList</code> directory. Restart the game, and it's done!
 extra-list-download-union: Download Union ExtraList
 extra-list-download-site: Download Site ExtraList

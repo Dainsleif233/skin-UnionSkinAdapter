@@ -1,10 +1,6 @@
 document.querySelectorAll('pre').forEach(function (el) {
   if (window.hljs) {
-    if (typeof window.hljs.highlightElement === 'function') {
-      window.hljs.highlightElement(el)
-    } else if (typeof window.hljs.highlightBlock === 'function') {
-      window.hljs.highlightBlock(el)
-    }
+    window.hljs.highlightElement(el)
   }
 })
 
