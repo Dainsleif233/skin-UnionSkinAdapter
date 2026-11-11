@@ -17,23 +17,14 @@
           <h3 class="card-title">Mod</h3>
         </div>
         <div class="card-body">
-          {% if custom_intro %}
-            {{ custom_intro|raw }}
-          {% else %}
-            <p>{{ trans('SysHub\\UnionSkinAdapter::config.mod-intro') }}</p>
-            <ul>
-              <li>
-                <a href="https://www.mcbbs.net/thread-269807-1-1.html" target="_blank" rel="noopener noreferrer">CustomSkinLoader</a>
-              </li>
-              {% if has_legacy %}
-                <li>{{ trans('SysHub\\UnionSkinAdapter::config.legacy') }}</li>
-              {% endif %}
-            </ul>
+          <p>{{ trans('SysHub\\UnionSkinAdapter::config.mod-intro') }}</p>
+          {% if has_legacy %}
+            <p>{{ trans('SysHub\\UnionSkinAdapter::config.legacy') }}</p>
           {% endif %}
         </div>
         <div class="card-footer">
           <a
-            href="https://www.mcmod.cn/class/883.html"
+            href="{{ trans('SysHub\\UnionSkinAdapter::config.mod-link') }}"
             target="_blank"
             class="btn bg-primary"
           >

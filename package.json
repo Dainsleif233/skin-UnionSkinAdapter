@@ -4,16 +4,13 @@
   "title": "SysHub\\UnionSkinAdapter::general.title",
   "description": "SysHub\\UnionSkinAdapter::general.description",
   "author": ["printempw", "Dainsleif"],
-  "url": "https://blessing.studio/",
+  "url": "https://syshub.top/",
   "namespace": "SysHub\\UnionSkinAdapter",
   "require": {
     "blessing-skin-server": "^5|^6"
   },
-  "enchants": {
-    "config": "Configuration",
-    "icon": {
-      "fa": "code",
-      "bg": "success"
-    }
+  "icon": {
+    "fa": "code",
+    "bg": "success"
   }
 }

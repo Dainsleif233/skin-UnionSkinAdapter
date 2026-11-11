@@ -1,6 +1,7 @@
 generate-config: 皮肤补丁兼容
 
-mod-intro: 本站支持以下加载方式：
+mod-intro: 万用皮肤补丁是一个支持从任意皮肤站或本地加载自定义皮肤与披风的模组。
+mod-link: https://www.mcmod.cn/class/883.html
 legacy: 传统加载方式
 
 extra-list-intro: |

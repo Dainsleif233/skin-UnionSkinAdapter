@@ -4,7 +4,6 @@ namespace SysHub\UnionSkinAdapter;
 
 use App\Services\Hook;
 use App\Services\PluginManager;
-use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 class Controller
 {
@@ -35,15 +34,10 @@ class Controller
             | JSON_UNESCAPED_UNICODE
             | JSON_UNESCAPED_SLASHES;
 
-        $intro = option_localized('union_skin_adapter_intro', '');
-        $converter = new GithubFlavoredMarkdownConverter();
-        $intro = $converter->convertToHtml($intro);
-
         return view('SysHub\UnionSkinAdapter::generator', [
             'csl' => json_encode($csl, $jsonConstants),
             'has_legacy' => optional($plugins->get('legacy-api'))->isEnabled(),
             'site' => $siteName,
-            'custom_intro' => $intro,
         ]);
     }
 }
