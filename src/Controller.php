@@ -30,12 +30,6 @@ class Controller
             ];
         }
 
-        $usm = [
-            'rootURIs' => [url('/usm').'/'],
-            'legacySkinURIs' => [],
-            'legacyCapeURIs' => [],
-        ];
-
         Hook::addScriptFileToPage(plugin_assets('union-skin-adapter', 'generator.js'));
 
         $jsonConstants = JSON_PRETTY_PRINT
@@ -48,8 +42,6 @@ class Controller
 
         return view('SysHub\UnionSkinAdapter::generator', [
             'csl' => json_encode($csl, $jsonConstants),
-            'has_usm' => optional($plugins->get('usm-api'))->isEnabled(),
-            'usm' => json_encode($usm, $jsonConstants),
             'has_legacy' => optional($plugins->get('legacy-api'))->isEnabled(),
             'site' => $siteName,
             'custom_intro' => $intro,
