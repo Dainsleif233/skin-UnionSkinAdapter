@@ -1,11 +1,14 @@
-import hljs from 'highlight.js/lib/core'
-import json from 'highlight.js/lib/languages/json'
+document.querySelectorAll('pre').forEach(function (el) {
+  if (window.hljs) {
+    if (typeof window.hljs.highlightElement === 'function') {
+      window.hljs.highlightElement(el)
+    } else if (typeof window.hljs.highlightBlock === 'function') {
+      window.hljs.highlightBlock(el)
+    }
+  }
+})
 
-hljs.registerLanguage('json', json)
-
-document.querySelectorAll('pre').forEach((el) => hljs.highlightBlock(el))
-
-function downloadExtraList(filename: string, entry: object) {
+function downloadExtraList(filename, entry) {
   const a = document.createElement('a')
   const blob = new Blob([JSON.stringify(entry)], { type: 'application/json' })
   a.download = filename
@@ -16,7 +19,7 @@ function downloadExtraList(filename: string, entry: object) {
 
 document
   .querySelector('#download-extra-list-union')
-  ?.addEventListener('click', () => {
+  ?.addEventListener('click', function () {
     downloadExtraList('Union.json', {
       name: 'Union',
       type: 'MojangAPI',
@@ -28,10 +31,10 @@ document
 
 document
   .querySelector('#download-extra-list-site')
-  ?.addEventListener('click', () => {
-    downloadExtraList(`${globalThis.blessing.site_name}.json`, {
+  ?.addEventListener('click', function () {
+    downloadExtraList(globalThis.blessing.site_name + '.json', {
       name: globalThis.blessing.site_name,
       type: 'CustomSkinAPI',
-      root: `${globalThis.blessing.base_url}/csl/`,
+      root: globalThis.blessing.base_url + '/csl/',
     })
   })
