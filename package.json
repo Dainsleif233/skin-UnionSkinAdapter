@@ -4,6 +4,7 @@
   "title": "SysHub\\UnionSkinAdapter::general.title",
   "description": "SysHub\\UnionSkinAdapter::general.description",
   "author": ["printempw", "Dainsleif"],
+  "license": "MIT",
   "url": "https://syshub.top/",
   "namespace": "SysHub\\UnionSkinAdapter",
   "require": {
